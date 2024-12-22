@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB.SHOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="styles/Shopbag.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="menu-icon">
+                <i class="back-arrow">
+                    <a href="index.html"><img src="images/arrow.svg" alt=""></a>
+                </i>
+            </div>
+            <div class="logo">
+                <a href="index.html"><i class="lucide-zap logo-icon"><img src="images/Icon2.svg"></i>
+                <span class="logo-font">SB<span class="neon-pink">SHOP</span></span></a>
+            </div>
+            <div class="nav-icons">
+                <i class="lucide-search"></i>
+                <i class="lucide-user"></i>
+                <i class="lucide-shopping-bag"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="cart-items">
+            <h2>Ваши товары</h2>
+            <div id="cart-content" class="cart-content"></div>
+        </section>
+        <section id="total">
+            <h2>Итого</h2>
+            <p>Общая сумма: £<span id="total-amount">0</span></p>
+            <button id="checkout-button" onclick="checkout()">Оплатить</button>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h2 class="logo-footer"><span>SB</span>Shop</h2>
+            <p>
+                Мы стремимся к предоставлению лучших продуктов и услуг нашим клиентам. Наш магазин всегда рад видеть вас!
+            </p>
+            <div class="contact">
+                <span><i class="fas fa-phone"></i> &nbsp; +79869449197</span>
+                <span><i class="fas fa-envelope"></i> &nbsp; vanakus0@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-section links">
+            <h2>Полезные ссылки</h2>
+            <br>
+            <ul>
+                <li><a href="index.html #main">Домашняя страница</a>
+                <li><a href="index.html #catalog">Каталог</a>
+                <li><a href="index.html #about-us">О нас</a>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h2>Социальные сети</h2>
+            <br>
+            <ul class="social-links">
+                <li><a href="https://t.me/sbshopsneakers" target="_blank" class="footer-telegram">Телеграм</a>
+                <li><a href="https://t.me/+JPZR-GJKC5c0YTE6" target="_blank" class="footer-telegrem">Отзывы</a>
+                <li><a href="https://www.avito.ru/user/9dc4f6477e769fbd8fefd72700ea32b2/profile?src=sharing" target="_blank" class="footer-avito">Авито</a>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SBSHOP | Все права защищены</p>
+    </div>
+</footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB.SHOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="menu-icon">
+                <i class="lucide-menu">
+                    <div class="burger" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </i>
+            </div>
+            <div class="logo">
+                <a href="index.html"><i class="lucide-zap logo-icon"><img src="images/Icon2.svg"></i>
+                <span class="logo-font">SB<span class="neon-pink">SHOP</span></span></a>
+            </div>
+            <div class="nav-icons">
+                <i class="lucide-search"></i>
+                <i class="lucide-user"></i>
+                <i class="lucide-shopping-bag"><a href="cart.html"><img src="images/Loot.svg" alt=""></a></i>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="#main" class="smooth-scroll">Главная</a>
+            <a href="#catalog" class="smooth-scroll">Каталог</a>
+            <a href="#about-us" class="smooth-scroll">О нас</a>
+        </nav>
+        <section id="cart-section" class="hidden">
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+        </section>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="main">
+            <div class="hero-content">
+                <h1>SB<span class="neon-pink">SHOP</span> 2024</h1>
+                <p class="hero-font">Discover the future of fashion</p>
+                <button class="cta-button smooth-scroll keyframes" href="#catalog">
+                    Заказать
+                    <i class="lucide-zap"></i>
+                </button>
+            </div>
+            <!-- <img src="images/zavoz.jpg"> -->
+    </header>
+
+    <!-- Products Section -->
+     <div id="catalog"></div>
+    <section class="products">
+        <h2>Каталог</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="Куртка Balenciaga.html">
+                <div class="product-image">
+                    <img src="images/clothes/balenciaga1.jpg" alt="Balenciaga"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="1">
+                    <h3>Balenciaga</h3>
+                    <p>лыжная куртка с вышитым логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£3,801</span>
+                        <button class="add-to-cart" onclick="addToCart('Куртка Balenciaga', 3801, 'images/clothes/balenciaga1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Ботинки Balenciaga.html" >
+                <div class="product-image">
+                    <img src="images/clothes/balenciagasteroid1.jpg" alt="Balenciaga"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="2">
+                    <h3>Balenciaga</h3>
+                    <p>ботинки Steroid</p>
+                    <div class="product-footer">
+                        <span class="price">£1,152</span>
+                        <button class="add-to-cart" onclick="addToCart('Ботинки Balenciaga', 1152, 'images/clothes/balenciagasteroid1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="Худи Balenciaga.html" >
+                    <img src="images/clothes/balensiaga6.jpg" alt="Balenciaga"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="3">
+                    <h3>Balenciaga</h3>
+                    <p>худи 3D Liquified Effect</p>
+                    <div class="product-footer">
+                        <span class="price">£939</span>
+                        <button class="add-to-cart" onclick="addToCart('Худи Balenciaga', 939, 'images/clothes/balensiaga6.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card"  data-id="4">
+                <a href="Кроссовки Balenciaga.html">
+                <div class="product-image">
+                    <img src="images/clothes/balensiagatriples1.jpg" alt="Balenciaga"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info">
+                    <h3>Balenciaga</h3>
+                    <p>кроссовки Triple S</p>
+                    <div class="product-footer">
+                        <span class="price">£1,150</span>
+                        <button class="add-to-cart" onclick="addToCart('Кроссовки Balenciaga', 1150, 'images/clothes/balensiagatriples1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Пиджак Balmain.html">
+                <div class="product-image">
+                    <img src="images/clothes/balmainloveletter1.jpg" alt="Balmain"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="5">
+                    <h3>Balmain</h3>
+                    <p>пиджак Love Letter</p>
+                    <div class="product-footer">
+                        <span class="price">£3,790</span>
+                        <button class="add-to-cart" onclick="addToCart('Пиджак Balmain', 3790, 'images/clothes/balmainloveletter1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Поло Balmain.html">
+                <div class="product-image">
+                    <img src="images/clothes/balmainpolo1.jpg" alt="Balmain"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="6">
+                    <h3>Balmain</h3>
+                    <p>рубашка поло с вышитым логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£285</span>
+                        <button class="add-to-cart" onclick="addToCart('Поло Balmain', 285, 'images/clothes/balmainpolo1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Рубашка Balmain.html">
+                <div class="product-image">
+                    <img src="images/clothes/balmainshirt1.jpg" alt="Balmain"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="7">
+                    <h3>Balmain</h3>
+                    <p>rhinestone-embellished shirt</p>
+                    <div class="product-footer">
+                        <span class="price">£1,350</span>
+                        <button class="add-to-cart" onclick="addToCart('Рубашка Balmain', 1350, 'images/clothes/balmainshirt1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Сумка Bottega Veneta.html">
+                <div class="product-image">
+                    <img src="images/clothes/bottegabag1.jpg" alt="Bottega Veneta"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="8">
+                    <h3>Bottega Veneta</h3>
+                    <p>сумка на плечо Cassette</p>
+                    <div class="product-footer">
+                        <span class="price">£1,433</span>
+                        <button class="add-to-cart" onclick="addToCart('Сумка Bottega Veneta', 1433, 'images/clothes/bottegabag1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Маленькая сумка Bottega Veneta.html">
+                <div class="product-image">
+                    <img src="images/clothes/bottegavenetabag1.jpg" alt="Bottega Veneta"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="9">
+                    <h3>Bottega Veneta</h3>
+                    <p>маленькая сумка через плечо Cassette</p>
+                    <div class="product-footer">
+                        <span class="price">£1,132</span>
+                        <button class="add-to-cart" onclick="addToCart('Маленькая сумка Bottega Veneta', 1132, 'images/clothes/bottegavenetabag1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Ботинки Bottega Veneta.html">
+                <div class="product-image">
+                    <img src="images/clothes/bottegavenetaboots1.jpg" alt="Bottega Veneta"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="10">
+                    <h3>Bottega Veneta</h3>
+                    <p>ботинки Tire Chelsea</p>
+                    <div class="product-footer">
+                        <span class="price">£486</span>
+                        <button class="add-to-cart" onclick="addToCart('Ботинки Bottega Veneta', 486, 'images/clothes/bottegavenetaboots1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Дубленка Brunello Cucinelli.html">
+                <div class="product-image">
+                    <img src="images/clothes/brunellocucinelli1.jpg" alt="Brunello Cucinelli"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="11">
+                    <h3>Brunello Cucinelli</h3>
+                    <p>двубортная дубленка</p>
+                    <div class="product-footer">
+                        <span class="price">£8,595</span>
+                        <button class="add-to-cart" onclick="addToCart('Дубленка Brunello Cucinelli', 8595, 'images/clothes/brunellocucinelli1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Пиджак Comme Des Garcons.html">
+                <div class="product-image">
+                    <img src="images/clothes/commedesgarcons1.jpg" alt="Comme Des Garcons"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="12">
+                    <h3>Comme Des Garcons</h3>
+                    <p>плиссированный однобортный пиджак</p>
+                    <div class="product-footer">
+                        <span class="price">£1,239</span>
+                        <button class="add-to-cart" onclick="addToCart('Пиджак Comme Des Garcons', 1239, 'images/clothes/commedesgarcons1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Бомбер Fred Perry.html">
+                <div class="product-image">
+                    <img src="images/clothes/fredperrybomber1.jpg" alt="Fred Perry"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="13">
+                    <h3>Fred Perry</h3>
+                    <p>бомбер на молнии с вышитым логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£347</span>
+                        <button class="add-to-cart" onclick="addToCart('Бомбер Fred Perry', 347, 'images/clothes/fredperrybomber1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Поло Fred Perry.html">
+                <div class="product-image">
+                    <img src="images/clothes/fredperrypolo1.jpg" alt="Fred Perry"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="14">
+                    <h3>Fred Perry</h3>
+                    <p>рубашка поло с вышитым логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£173</span>
+                        <button class="add-to-cart" onclick="addToCart('Поло Fred Perry', 173, 'images/clothes/fredperrypolo1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Пуховик Moncler.html">
+                <div class="product-image">
+                    <img src="images/clothes/moncler1.jpg" alt="Moncler"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="15">
+                    <h3>Moncler</h3>
+                    <p>пуховик Maya с капюшоном</p>
+                    <div class="product-footer">
+                        <span class="price">£1,909</span>
+                        <button class="add-to-cart" onclick="addToCart('Пуховик Moncler', 1909, 'images/clothes/moncler1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Ботинки Moncler.html">
+                <div class="product-image">
+                    <img src="images/clothes/monclerpeka1.jpg" alt="Moncler"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="16">
+                    <h3>Moncler</h3>
+                    <p>ботинки хайкеры Peka Trek</p>
+                    <div class="product-footer">
+                        <span class="price">£775</span>
+                        <button class="add-to-cart" onclick="addToCart('Ботинки Moncler', 775, 'images/clothes/monclerpeka1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Пуховик Prada.html">
+                <div class="product-image">
+                    <img src="images/clothes/prada1.jpg" alt="Prada"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="17">
+                    <h3>Prada</h3>
+                    <p>укороченный пуховик с логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£2,065</span>
+                        <button class="add-to-cart" onclick="addToCart('Пуховик Prada', 2065, 'images/clothes/prada1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Бомбер Prada.html">
+                <div class="product-image">
+                    <img src="images/clothes/pradabomber1.jpg" alt="Prada"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="18">
+                    <h3>Prada</h3>
+                    <p>бомбер из овчины</p>
+                    <div class="product-footer">
+                        <span class="price">£7,100</span>
+                        <button class="add-to-cart" onclick="addToCart('Бомбер Prada', 7100, 'images/clothes/pradabomber1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Куртка Prada.html">
+                <div class="product-image">
+                    <img src="images/clothes/pradajacket1.jpg" alt="Prada"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="19">
+                    <h3>Prada</h3>
+                    <p>кожаная куртка</p>
+                    <div class="product-footer">
+                        <span class="price">£2,050</span>
+                        <button class="add-to-cart" onclick="addToCart('Куртка Prada', 2050, 'images/clothes/pradajacket1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Футболка Prada.html">
+                <div class="product-image">
+                    <img src="images/clothes/pradatshirt1.jpg" alt="Prada"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="20">
+                    <h3>Prada</h3>
+                    <p>футболка из джерси</p>
+                    <div class="product-footer">
+                        <span class="price">£920</span>
+                        <button class="add-to-cart" onclick="addToCart('Футболка Prada', 920, 'images/clothes/pradatshirt1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Кеды Rick Owens.html">
+                <div class="product-image">
+                    <img src="images/clothes/rickowensgeo1.jpg" alt="Rick Owens"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="21">
+                    <h3>Rick Owens</h3>
+                    <p>высокие кеды Geobasket</p>
+                    <div class="product-footer">
+                        <span class="price">£1,075</span>
+                        <button class="add-to-cart" onclick="addToCart('Кеды Rick Owens', 1075, 'images/clothes/rickowensgeo1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Футболка Rick Owens.html">
+                <div class="product-image">
+                    <img src="images/clothes/rickowenstommy1.jpg" alt="Rick Owens"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="22">
+                    <h3>Rick Owens</h3>
+                    <p>футболка Tommy с вышитым логотипом из коллаборации с Champion</p>
+                    <div class="product-footer">
+                        <span class="price">£411</span>
+                        <button class="add-to-cart" onclick="addToCart('Футболка Rick Owens', 411, 'images/clothes/rickowenstommy1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Худи VETEMENTS.html">
+                <div class="product-image">
+                    <img src="images/clothes/vetementsanarchy1.jpg" alt="VETEMENTS"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="23">
+                    <h3>VETEMENTS</h3>
+                    <p>худи Reverse Anarchy</p>
+                    <div class="product-footer">
+                        <span class="price">£718</span>
+                        <button class="add-to-cart" onclick="addToCart('Худи VETEMENTS', 718, 'images/clothes/vetementsanarchy1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Бомбер Blackout Racing VETEMENTS.html">
+                <div class="product-image">
+                    <img src="images/clothes/vetementsblackout1.jpg" alt="VETEMENTS"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="24">
+                    <h3>VETEMENTS</h3>
+                    <p>бомбер Blackout Racing</p>
+                    <div class="product-footer">
+                        <span class="price">£2,720</span>
+                        <button class="add-to-cart" onclick="addToCart('Бомбер Blackout Racing VETEMENTS', 2720, 'images/clothes/vetementsblackout1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Кепка VETEMENTS.html">
+                <div class="product-image">
+                    <img src="images/clothes/vetementscap1.jpg" alt="VETEMENTS"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="25">
+                    <h3>VETEMENTS</h3>
+                    <p>кепка с нашивкой-логотипом</p>
+                    <div class="product-footer">
+                        <span class="price">£307</span>
+                        <button class="add-to-cart" onclick="addToCart('Кепка VETEMENTS', 307, 'images/clothes/vetementscap1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Кроссовки VETEMENTS.html">
+                <div class="product-image">
+                    <img src="images/clothes/vetementsnewrock1.jpg" alt="VETEMENTS"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="26">
+                    <h3>VETEMENTS</h3>
+                    <p>кроссовки из коллаборации с New Rock</p>
+                    <div class="product-footer">
+                        <span class="price">£687</span>
+                        <button class="add-to-cart" onclick="addToCart('Кроссовки VETEMENTS', 687, 'images/clothes/vetementsnewrock1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Бомбер Split VETEMENTS.html">
+                <div class="product-image">
+                    <img src="images/clothes/vetementssplit1.jpg" alt="VETEMENTS"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="27">
+                    <h3>VETEMENTS</h3>
+                    <p>бомбер Split из коллаборации с Alpha Industries</p>
+                    <div class="product-footer">
+                        <span class="price">£1,774</span>
+                        <button class="add-to-cart" onclick="addToCart('Бомбер Split VETEMENTS', 1774, 'images/clothes/vetementssplit1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Кроссовки adidas Yeezy Boost 350.html">
+                <div class="product-image">
+                    <img src="images/clothes/yeezy1.jpg" alt="adidas Yeezy"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="28">
+                    <h3>adidas Yeezy</h3>
+                    <p>кроссовки YEEZY Boost 350 V2 Oreo</p>
+                    <div class="product-footer">
+                        <span class="price">£336</span>
+                        <button class="add-to-cart" onclick="addToCart('Кроссовки adidas Yeezy Boost 350', 336, 'images/clothes/yeezy1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Кроссовки adidas Yeezy Boost 700.html">
+                <div class="product-image">
+                    <img src="images/clothes/yeezyboost1.jpg" alt="adidas Yeezy"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="29">
+                    <h3>adidas Yeezy</h3>
+                    <p>кроссовки Yeezy Boost 700 OG Wave Runner</p>
+                    <div class="product-footer">
+                        <span class="price">£472</span>
+                        <button class="add-to-cart" onclick="addToCart('Кроссовки adidas Yeezy Boost 700', 472, 'images/clothes/yeezyboost1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Nike Air Force 1 Utopia Edition.html">
+                <div class="product-image">
+                    <img src="images/clothes/nikeairforce1.jpg" alt="Nike"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="30">
+                    <h3>Nike</h3>
+                    <p>x Travis Scott Air Force 1 Low '07 "Utopia Edition" sneakers</p>
+                    <div class="product-footer">
+                        <span class="price">£224</span>
+                        <button class="add-to-cart" onclick="addToCart('Nike Air Force 1 Utopia Edition', 224, 'images/clothes/nikeairforce1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Nike Huarache.html">
+                <div class="product-image">
+                    <img src="images/clothes/nikehuarache1.jpg" alt="Nike"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="31">
+                    <h3>Nike</h3>
+                    <p>кроссовки Air Huarache</p>
+                    <div class="product-footer">
+                        <span class="price">£236</span>
+                        <button class="add-to-cart" onclick="addToCart('Nike Huarache', 236, 'images/clothes/nikehuarache1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Nike Air Jordan 1 High.html">
+                <div class="product-image">
+                    <img src="images/clothes/nikejordanhigh1.jpg" alt="Nike"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="32">
+                    <h3>Nike</h3>
+                    <p>кроссовки Air Jordan 1 High OG TS SP Travis Scott</p>
+                    <div class="product-footer">
+                        <span class="price">£1,937</span>
+                        <button class="add-to-cart" onclick="addToCart('Nike Air Jordan 1 High', 1937, 'images/clothes/nikejordanhigh1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Nike SB Dunk.html">
+                <div class="product-image">
+                    <img src="images/clothes/nikesbdunk1.jpg" alt="Nike"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="33">
+                    <h3>Nike</h3>
+                    <p>кроссовки SB Dunk из коллаборации с Travis Scott</p>
+                    <div class="product-footer">
+                        <span class="price">£2,786</span>
+                        <button class="add-to-cart" onclick="addToCart('Nike SB Dunk', 2786, 'images/clothes/nikesbdunk1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="Nike Air Force 1 Tiffany.html">
+                <div class="product-image">
+                    <img src="images/clothes/niketiffany1.jpg" alt="Nike"></a>
+                    <!-- <button class="favorite-btn">
+                        <i class="lucide-heart"></i>
+                    </button> -->
+                </div>
+                <div class="product-info" data-id="34">
+                    <h3>Nike</h3>
+                    <p>кроссовки Air Force 1 Low из коллаборации с Tiffany & Co.</p>
+                    <div class="product-footer">
+                        <span class="price">£1,625</span>
+                        <button class="add-to-cart" onclick="addToCart('Nike Air Force 1 Tiffany', 1625, 'images/clothes/niketiffany1.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-more"><button class="btn hidden">Показать ещё</button></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about-us">
+        <div class="about-content">
+            <h2>О нас</h2>
+            <p> Мы предоставляем услуги выкупа вещей  с китайского маркет плейса POIZON .</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2 class="logo-footer"><span>SB</span>Shop</h2>
+                <p>
+                    Мы стремимся к предоставлению лучших продуктов и услуг нашим клиентам. Наш магазин всегда рад видеть вас!
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; +79869449197</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; vanakus0@gmail.com</span>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Полезные ссылки</h2>
+                <br>
+                <ul>
+                    <li><a href="#main">Домашняя страница</a>
+                    <li><a href="#catalog">Каталог</a>
+                    <li><a href="#about-us">О нас</a>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Социальные сети</h2>
+                <br>
+                <ul class="social-links">
+                    <li><a href="https://t.me/sbshopsneakers" target="_blank" class="footer-telegram">Телеграм</a>
+                    <li><a href="https://t.me/+JPZR-GJKC5c0YTE6" target="_blank" class="footer-telegrem">Отзывы</a>
+                    <li><a href="https://www.avito.ru/user/9dc4f6477e769fbd8fefd72700ea32b2/profile?src=sharing" target="_blank" class="footer-avito">Авито</a>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SBSHOP | Все права защищены</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
